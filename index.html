@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Text Calculator</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <form class="tax-form" onsubmit="handleSubmit">
+      <label for="annual-income">Enter gross annual income</label>
+      <div class="input-field">
+        <input type="number" name="annual-income" id="annual-income" />
+      </div>
+
+      <label for="extra-income">Enter extra income</label>
+      <div class="input-field">
+        <input type="number" name="extra-income" id="extra-income" />
+      </div>
+
+      <label for="age-group">Enter age group</label>
+      <div class="input-field">
+        <select name="age-group" id="age-group">
+          <option value="below-40">&lt; 40</option>
+          <option value="40-60">&ge; 40 &lt; 60</option>
+          <option value="above-60">&ge; 60</option>
+        </select>
+      </div>
+
+      <label for="applicable-deduction">Enter gross annual income</label>
+      <div class="input-field">
+        <input
+          type="number"
+          name="applicable-deduction"
+          id="applicable-deduction"
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@800&family=Roboto:wght@700&family=Ubuntu:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tax-form {
+  box-shadow: 0 0 0.5em black;
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  width: 100%;
+}
