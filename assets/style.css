@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@500&display=swap");
+
+:root {
+  --primary-font: "Ubuntu", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+  --primary-color: royalblue;
+  --secondary-color: rgb(58, 55, 55);
+  --shadow-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+input,
+select {
+  all: unset;
+}
+
+.tax-form {
+  box-shadow: 0 0 0.5em var(--shadow-color);
+  padding: 2em;
+  min-width: 30%;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  margin-bottom: 0.2em;
+  font-family: var(--primary-font);
+}
+
+.error,
+.help {
+  position: relative;
+}
+
+.error,
+.description {
+  display: none;
+}
+
+.input-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1em solid var(--secondary-color);
+  border-radius: 0.2em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+input,
+select {
+  opacity: 0.6;
+  flex-grow: 1;
+  font-family: var(--secondary-font);
+}
+
+.description,
+.error-message {
+  position: absolute;
+  translate: 0 0.5em;
+  background-color: var(--secondary-color);
+  color: white;
+  width: 25ch;
+  padding: 1em;
+  font-size: 0.8em;
+  font-family: var(--primary-font);
+  border-radius: 0.5em;
+  z-index: 999;
+}
+
+:is(.description, .error-message)::before {
+  content: "";
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 1em solid var(--secondary-color);
+  position: absolute;
+  top: -0.9em;
+  left: 0.5em;
+  z-index: 999;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding-block: 0.75em;
+  font-family: var(--primary-font);
+  color: white;
+  border-radius: 0.2em;
+  margin-top: 1em;
+}

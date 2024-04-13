@@ -3,40 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
     <title>Text Calculator</title>
   </head>
   <body>
-    <script src="script.js"></script>
     <form class="tax-form" onsubmit="handleSubmit">
-      <label for="annual-income">Enter gross annual income</label>
+      <label for="annual-income">
+        <span>Enter gross annual income</span>
+        <span class="help">
+          <img src="/assets/icons/help.svg" alt="help icon" />
+          <p class="description">
+            Gross annual income is your total salary in a year before deductions
+          </p>
+        </span>
+      </label>
       <div class="input-field">
-        <input type="number" name="annual-income" id="annual-income" />
+        <input type="text" name="annual-income" id="annual-income" />
+        <span class="error">
+          <img
+            src="/assets/icons/error.svg"
+            alt="error icon"
+            class="error-icon"
+          />
+          <p class="error-message">Please enter number only</p>
+        </span>
       </div>
 
-      <label for="extra-income">Enter extra income</label>
+      <label for="extra-income">
+        <span>Enter extra income</span>
+        <span class="help">
+          <img src="/assets/icons/help.svg" alt="help icon" />
+          <p class="description">
+            Extra income is income obtain via passive income
+          </p>
+        </span>
+      </label>
       <div class="input-field">
-        <input type="number" name="extra-income" id="extra-income" />
+        <input type="text" name="extra-income" id="extra-income" />
+        <span class="error">
+          <img
+            src="/assets/icons/error.svg"
+            alt="error icon"
+            class="error-icon"
+          />
+          <p class="error-message">Please enter number only</p>
+        </span>
       </div>
 
-      <label for="age-group">Enter age group</label>
+      <label for="age-group">
+        <span>Enter age group</span>
+        <span class="help">
+          <img src="/assets/icons/help.svg" alt="help icon" />
+          <p class="description">
+            Age group is the range of age you are currently
+          </p>
+        </span>
+      </label>
       <div class="input-field">
         <select name="age-group" id="age-group">
-          <option value="below-40">&lt; 40</option>
-          <option value="40-60">&ge; 40 &lt; 60</option>
-          <option value="above-60">&ge; 60</option>
+          <option value="below-40">Less than 40</option>
+          <option value="40-60">40-60</option>
+          <option value="above-60">Greater than 60</option>
         </select>
       </div>
 
-      <label for="applicable-deduction">Enter gross annual income</label>
+      <label for="applicable-deduction">
+        <span>Enter total applicable deductions</span>
+        <span class="help">
+          <img src="/assets/icons/help.svg" alt="help icon" />
+          <p class="description">
+            Applicable deduction is the tax on your gross income
+          </p>
+        </span>
+      </label>
+
       <div class="input-field">
         <input
-          type="number"
+          type="text"
           name="applicable-deduction"
           id="applicable-deduction"
         />
+        <span class="error">
+          <img
+            src="/assets/icons/error.svg"
+            alt="error icon"
+            class="error-icon"
+          />
+          <p class="error-message">Please enter number only</p>
+        </span>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" class="btn-submit">Submit</button>
     </form>
+    <script src="/assets/script.js"></script>
   </body>
 </html>
