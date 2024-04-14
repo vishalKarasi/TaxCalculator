@@ -1,0 +1,11 @@
+{
+  "name": "taxcalculator",
+  "version": "1.0.0",
+  "description": "A simple tax calculator project",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
