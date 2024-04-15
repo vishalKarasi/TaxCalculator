@@ -1,0 +1,25 @@
+# TaxCalculator
+
+TaxCalculator is a simple web application developed as an assignment for an internship. It calculates the overall income based on you gross income, age, and tax deduction.
+
+## Demo
+
+Check out the [TaxCalculator Demo](https://webbuilder.onrender.com) to see it in action.
+
+## Installation
+
+To run TaxCalculator locally, follow these steps:
+
+1. Fork the project.
+2. Run `npm install` to install dependencies.
+3. Install Live server and press `Go Live`
+
+## Folder Structure Info
+
+- **assests:** Holds all necessary styles, scripts and icons
+
+- **tests:** Contains jest testing for validateInputs and calculateTax function
+
+## Dependencies
+
+- [jest](https://jestjs.io/) - Used for unit testing

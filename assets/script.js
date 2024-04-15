@@ -1,28 +1,9 @@
-const helpIcons = document.querySelectorAll(".help img");
-const errorIcons = document.querySelectorAll(".error img");
-
 const form = document.querySelector(".tax-form");
 const submitBtn = document.querySelector(".btn-primary");
+
 const popupOverlay = document.querySelector(".overlay");
 const popupAmount = document.querySelector("#amount");
 const popupCloseBtn = document.querySelector("#popup-close");
-
-// Show/hide tooltips or error messages
-function toggleTooltip(element) {
-  element.nextElementSibling.style.display =
-    element.nextElementSibling.style.display === "block" ? "none" : "block";
-}
-
-// Event listeners for help icons and error icons
-helpIcons.forEach((helpIcon) => {
-  helpIcon.addEventListener("mouseover", () => toggleTooltip(helpIcon));
-  helpIcon.addEventListener("mouseout", () => toggleTooltip(helpIcon));
-});
-
-errorIcons.forEach((errorIcon) => {
-  errorIcon.addEventListener("mouseover", () => toggleTooltip(errorIcon));
-  errorIcon.addEventListener("mouseout", () => toggleTooltip(errorIcon));
-});
 
 // Function to validate inputs
 function validateInputs(inputFields) {
@@ -41,6 +22,7 @@ function validateInputs(inputFields) {
 // Function to calculate tax
 function calculateTax(annualIncome, extraIncome, deductions, ageGroup) {
   let taxableIncome = annualIncome + extraIncome - deductions;
+
   let taxRate = 0;
   let taxAmount = 0;
 
@@ -56,6 +38,7 @@ function calculateTax(annualIncome, extraIncome, deductions, ageGroup) {
         taxRate = 0.1;
         break;
     }
+
     taxAmount = (taxableIncome - 800000) * taxRate;
   }
 
@@ -72,19 +55,25 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const inputFields = form.querySelectorAll("input[type='text']");
   if (validateInputs(inputFields)) {
-    const annualIncome =
-      parseFloat(document.getElementById("annual-income").value) || 0;
-    const extraIncome =
-      parseFloat(document.getElementById("extra-income").value) || 0;
-    const deductions =
-      parseFloat(document.getElementById("applicable-deduction").value) || 0;
+    const annualIncome = parseFloat(
+      document.getElementById("annual-income").value
+    );
+    const extraIncome = parseFloat(
+      document.getElementById("extra-income").value
+    );
+    const deductions = parseFloat(
+      document.getElementById("applicable-deduction").value
+    );
     const ageGroup = document.getElementById("age-group").value;
+
     const overallIncome = calculateTax(
       annualIncome,
       extraIncome,
       deductions,
       ageGroup
     );
+
+    // display result in popup
     popupAmount.textContent = overallIncome.toFixed(2);
     popupOverlay.style.display = "flex";
   }

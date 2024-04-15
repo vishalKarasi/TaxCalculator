@@ -44,6 +44,7 @@ label {
   gap: 0.25em;
   margin-bottom: 0.2em;
   font-family: var(--primary-font);
+  font-size: 1.15em;
 }
 
 .error,
@@ -51,14 +52,22 @@ label {
   position: relative;
 }
 
-svg {
-  fill: red;
-}
-
 .error,
 .error-message,
 .description {
   display: none;
+}
+
+img {
+  translate: 0 10%;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+img:hover + p {
+  display: block;
 }
 
 .input-field {
