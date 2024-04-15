@@ -1,4 +1,4 @@
-// Function to calculate tax
+// For testing purpose
 function calculateTax(annualIncome, extraIncome, deductions, ageGroup) {
   let taxableIncome = annualIncome + extraIncome - deductions;
   let taxRate = 0;

@@ -20,6 +20,10 @@ To run TaxCalculator locally, follow these steps:
 
 - **tests:** Contains jest testing for validateInputs and calculateTax function
 
+## Testing Result
+
+![testing result of validateInputs and calculateTax function](/assets/images/taxcalculator_testing.png)
+
 ## Dependencies
 
 - [jest](https://jestjs.io/) - Used for unit testing
